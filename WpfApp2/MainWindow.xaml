@@ -25,8 +25,8 @@
 
         <StackPanel Margin="10,10,10,5" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7">
 
-            <MediaElement  x:Name="mediaElement1" Source="/images/main.jpg" HorizontalAlignment="Left"  >
-            </MediaElement>
+            <MediaElement  x:Name="mediaElement1" Source="/images/main.jpg" HorizontalAlignment="Left"  />
+
         </StackPanel>
 
         <StackPanel x:Name="t" Margin="10,5,5,10" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Bottom">
