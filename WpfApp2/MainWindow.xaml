@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="420" Width="830">
+        Title="MainWindow" Height="420" Width="840">
 
     <Grid Background="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Height="auto">
         <Grid.ColumnDefinitions>
@@ -22,14 +22,14 @@
             <RowDefinition />
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
+      
+            <StackPanel Margin="5,5,5,2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7">
 
-        <StackPanel Margin="10,10,10,5" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7">
+            <Image   Source= "/0,main.jpg" HorizontalAlignment="Left" />
 
-            <MediaElement  x:Name="mediaElement1" Source="/images/main.jpg" HorizontalAlignment="Left"  >
-            </MediaElement>
         </StackPanel>
 
-        <StackPanel x:Name="t" Margin="10,5,5,10" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+        <StackPanel x:Name="t" Margin="5,2,5,5" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <TextBlock  Foreground="White">
                 <Run Text="PHONK MIX 2023 ※ BEST PHONK FOR NIGHT DRIVE (LXST CXNTURY TYPE) ※ JDM NIGHT CAR MUSIC | ФОНК 2023" FontSize="11"/></TextBlock>
         </StackPanel>
@@ -38,17 +38,13 @@
             <Button x:Name="Автор" Background="Gray" Margin="5,10,5,10" Content="Автор: Chill Beat" Foreground="Black"/>
         </WrapPanel>
         <DockPanel Margin="0,3,0,3" Grid.Column="1" Grid.Row="1" Background='Black' >
-            <MediaElement x:Name="mediaElement2" 
-                Source="/images/1.jpg" 
-                          Width="90"/>
+            <Image  Source="/1.jpg"  Width="90"/>
             <TextBlock Margin="5,2,0,0" Foreground="White" Width="100" HorizontalAlignment="Left" FontSize="6" TextWrapping="Wrap" FontStyle="Italic">
                 <Run Text="PHONK MIX 2023 ※ BEST PHONK FOR NIGHT DRIVE (LXST CXNTURY TYPE) ※ JDM NIGHT CAR MUSIC | ФОНК 2023" FontSize="7"/></TextBlock>
 
         </DockPanel>
         <DockPanel Margin="0,3,0,3" Grid.Column="1" Grid.Row="2" Background='Black' >
-            <MediaElement x:Name="mediaElement3" 
-          Source="/images/2.jpg" 
-                    Width="90"/>
+            <Image   Source="/2.jpg" Width="90"/>
             <TextBlock Margin="5,2,0,0" 
                        Foreground="White" Width="100" HorizontalAlignment="Left" FontSize="6" 
                        TextWrapping="Wrap" FontStyle="Italic">
@@ -56,32 +52,28 @@
 
         </DockPanel>
         <DockPanel Margin="0,3,0,3" Grid.Column="1" Grid.Row="3" Background='Black' >
-            <MediaElement x:Name="mediaElement4" 
-          Source="/images/3.jpg" 
+            <Image  Source="/3.jpg" 
                     Width="90"/>
             <TextBlock Margin="5,2,0,0" Foreground="White" Width="100" HorizontalAlignment="Left" FontSize="6" TextWrapping="Wrap" FontStyle="Italic">
           <Run Text="ＮＯＳＴＡＬＧＩＡ - PHONK MIX FOR NIGHT DRIVE - BEST LXST CXNTURY TYPE - 3 HOUR CAR MUSIC 2023" FontSize="7"/></TextBlock>
 
         </DockPanel>
         <DockPanel Margin="0,3,0,3" Grid.Column="1" Grid.Row="4" Background='Black' >
-            <MediaElement x:Name="mediaElement5" 
-          Source="/images/4.jpg" 
+            <Image    Source="/4.jpg" 
                     Width="90"/>
             <TextBlock Margin="5,2,0,0" Foreground="White" Width="100" HorizontalAlignment="Left" FontSize="6" TextWrapping="Wrap" FontStyle="Italic">
           <Run Text="BEST PHONK MUSIC 2023 ※ ATMOSPHERIC PHONK MIX FOR NIGHT DRIVE ※ BEST JDM MUSIC ※ фонк 2023" FontSize="7"/></TextBlock>
 
         </DockPanel>
         <DockPanel Margin="0,3,0,3" Grid.Column="1" Grid.Row="5" Background='Black' >
-            <MediaElement x:Name="mediaElement6" 
-          Source="/images/5.jpg" 
+            <Image Source="/5.jpg" 
                     Width="90"/>
             <TextBlock Margin="5,2,0,0" Foreground="White" Width="100" HorizontalAlignment="Left" FontSize="6" TextWrapping="Wrap" FontStyle="Italic">
           <Run Text="LXST CXNTURY | PHONK MIX #2" FontSize="7"/></TextBlock>
 
         </DockPanel>
         <DockPanel Margin="0,3,0,3" Grid.Column="1" Grid.Row="6" Background='Black' >
-            <MediaElement x:Name="mediaElement7" 
-          Source="/images/6.jpg" 
+            <Image  Source="/6.jpg" 
                     Width="90"/>
             <TextBlock Margin="5,2,0,0" Foreground="White" Width="100" HorizontalAlignment="Left" FontSize="6" TextWrapping="Wrap" FontStyle="Italic">
           <Run Text="Sigma Music Phonk Mix #2" FontSize="7"/></TextBlock>
