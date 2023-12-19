@@ -25,7 +25,9 @@
       
             <StackPanel Margin="5,5,5,2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7">
 
-            <Image   Source= "/0,main.jpg" HorizontalAlignment="Left" />
+            <MediaElement Name="mediaElement1" Source= "pack://application:,,,/1.avi">
+               
+            </MediaElement> 
 
         </StackPanel>
 
