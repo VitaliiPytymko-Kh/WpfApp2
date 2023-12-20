@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
         Title="MainWindow" Height="410" Width="840">
-
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Open" CanExecute="Open_CanExecute" Executed="Open_Executed" />
+        <CommandBinding/>
+    </Window.CommandBindings>
     <Grid Background="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Height="auto">
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="620"/>
@@ -22,23 +25,37 @@
             <RowDefinition />
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-      
             <StackPanel Margin="5,5,5,2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7">
 
-            <MediaElement Name="mediaElement1" Source= "1.avi" LoadedBehavior="Play"/> 
-
-
-
-        </StackPanel>
+            <MediaElement Name="mediaElement1" Source= "1.avi" LoadedBehavior="Manual"/> 
+            </StackPanel>
 
         <StackPanel x:Name="t" Margin="5,2,5,5" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <WrapPanel>
+                <TextBlock Foreground="White" VerticalAlignment="Center" Margin="5"  >Volume</TextBlock>
+                <Slider Name="volumeSlider"  VerticalAlignment="Center" ValueChanged="ChangeMediaVolume" Minimum="0" Maximum="1" Value="0.5" Width="70" Background="#FFFF009D"/>
+                <Button x:Name="_btnPLay" Click="BtnPlay" Margin="5" Width="30" Height="20">Play</Button>
+                <Button x:Name="_btnPause" Click="BtnPause" Margin="5" Width="40" Height="20" >Pause</Button>
+                <Button x:Name="_btnStop" Click="BtnStop" Margin="5" Width="30" Height="20">Stop</Button>
+                <StatusBarItem>
+                    <TextBlock Name="lblProgressStatus" Foreground="#FFFF0063" >00:00:00</TextBlock>
+                </StatusBarItem>
+                <StatusBarItem  Grid.Column="1" HorizontalContentAlignment="Stretch" Width="100">
+                    <Slider  Name="sliProgress" Thumb.DragStarted="SliProgress_DragStarted"  Thumb.DragCompleted="SliProgress_DragCompleted" ValueChanged="SliProgress_ValueChanged" Margin="0,0,-73,0"/>
+                </StatusBarItem>
+
+            </WrapPanel>
+
             <TextBlock  Foreground="White">
                 <Run Text="PHONK MIX 2023 ※ BEST PHONK FOR NIGHT DRIVE (LXST CXNTURY TYPE) ※ JDM NIGHT CAR MUSIC | ФОНК 2023" FontSize="11"/></TextBlock>
         </StackPanel>
-        <WrapPanel Margin="0,3,0,3" Grid.Column="1" Grid.Row="0" Background='Black' >
-            <Button  x:Name="Все_видео" Background="Black"  Margin="5,10,5,10"  Content="Все видео" Foreground="White" />
-            <Button x:Name="Автор" Background="Gray" Margin="5,10,5,10" Content="Автор: Chill Beat" Foreground="Black"/>
-        </WrapPanel>
+        <ToolBar Margin="0,3,0,3" Grid.Column="1" Grid.Row="0" Background='Black'>
+            <Button Command="ApplicationCommands.Open"
+                 x:Name="More" Background="Black"  Foreground="Aqua"  Content="More..." >
+                <!--<Image Source="/WpfTutorialSamples;component/Images/folder.png" />-->
+            </Button>
+        </ToolBar>
+       
         <DockPanel Margin="0,3,0,3" Grid.Column="1" Grid.Row="1" Background='Black' >
             <Image  Source="/1.jpg"  Width="90"/>
             <TextBlock Margin="5,2,0,0" Foreground="White" Width="100" HorizontalAlignment="Left" FontSize="6" TextWrapping="Wrap" FontStyle="Italic">
