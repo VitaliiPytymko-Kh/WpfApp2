@@ -25,10 +25,10 @@
             <RowDefinition />
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-            <StackPanel Margin="5,5,5,2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7">
+        <StackPanel Margin="5,5,5,2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7">
 
-            <MediaElement Name="mediaElement1" Source= "1.avi" LoadedBehavior="Manual"/> 
-            </StackPanel>
+            <MediaElement Name="mediaElement1" Source= "1.avi" LoadedBehavior="Manual"/>
+        </StackPanel>
 
         <StackPanel x:Name="t" Margin="5,2,5,5" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <WrapPanel>
@@ -55,7 +55,7 @@
                 <!--<Image Source="/WpfTutorialSamples;component/Images/folder.png" />-->
             </Button>
         </ToolBar>
-       
+
         <DockPanel Margin="0,3,0,3" Grid.Column="1" Grid.Row="1" Background='Black' >
             <Image  Source="/1.jpg"  Width="90"/>
             <TextBlock Margin="5,2,0,0" Foreground="White" Width="100" HorizontalAlignment="Left" FontSize="6" TextWrapping="Wrap" FontStyle="Italic">
@@ -98,7 +98,7 @@
           <Run Text="Sigma Music Phonk Mix #2" FontSize="7"/></TextBlock>
 
         </DockPanel>
-     
+
     </Grid>
 
 

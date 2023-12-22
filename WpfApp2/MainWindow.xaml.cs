@@ -90,5 +90,6 @@ namespace WpfApp2
             if (openFileDialog.ShowDialog()==true)
                 mediaElement1.Source= new Uri(openFileDialog.FileName);
         }
+
     }
 }
