@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="410" Width="840">
+        Title="MainWindow" Height="429" Width="853">
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Open" CanExecute="Open_CanExecute" Executed="Open_Executed" />
         <CommandBinding/>
@@ -27,27 +27,34 @@
         </Grid.RowDefinitions>
         <StackPanel Margin="5,5,5,2" Grid.Column="0" Grid.Row="0" Grid.RowSpan="7">
 
-            <MediaElement Name="mediaElement1" Source= "1.avi" LoadedBehavior="Manual"/>
+            <MediaElement Name="mediaElement1"  LoadedBehavior="Manual"/>
+
         </StackPanel>
 
-        <StackPanel x:Name="t" Margin="5,2,5,5" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+        <StackPanel x:Name="t" Margin="5,2,5,5" Grid.Column="0" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Bottom">
+            <Button Content="Добавить видео" Click="BtnAddVideo_Click"></Button>
+        </StackPanel>
+
+        <StackPanel x:Name="b" Margin="5,2,5,5" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" VerticalAlignment="Bottom">
             <WrapPanel>
                 <TextBlock Foreground="White" VerticalAlignment="Center" Margin="5"  >Volume</TextBlock>
                 <Slider Name="volumeSlider"  VerticalAlignment="Center" ValueChanged="ChangeMediaVolume" Minimum="0" Maximum="1" Value="0.5" Width="70" Background="#FFFF009D"/>
                 <Button x:Name="_btnPLay" Click="BtnPlay" Margin="5" Width="30" Height="20">Play</Button>
                 <Button x:Name="_btnPause" Click="BtnPause" Margin="5" Width="40" Height="20" >Pause</Button>
                 <Button x:Name="_btnStop" Click="BtnStop" Margin="5" Width="30" Height="20">Stop</Button>
+                <TextBlock x:Name="txtFileName" Margin="5" Foreground="AliceBlue" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
                 <StatusBarItem>
-                    <TextBlock Name="lblProgressStatus" Foreground="#FFFF0063" >00:00:00</TextBlock>
+
+                    <TextBlock x:Name="txtTime"   Margin="5,5,5,5" Grid.Column="0" Grid.Row="10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Foreground="Aqua" > @{txtTime.Value}</TextBlock>
                 </StatusBarItem>
                 <StatusBarItem  Grid.Column="1" HorizontalContentAlignment="Stretch" Width="100">
-                    <Slider  Name="sliProgress" Thumb.DragStarted="SliProgress_DragStarted"  Thumb.DragCompleted="SliProgress_DragCompleted" ValueChanged="SliProgress_ValueChanged" Margin="0,0,-73,0"/>
+                    <Slider x:Name="sliderPosition" Minimum="0" Maximum="1" Value="0" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300"/>
                 </StatusBarItem>
+               
 
             </WrapPanel>
 
-            <TextBlock  Foreground="White">
-                <Run Text="PHONK MIX 2023 ※ BEST PHONK FOR NIGHT DRIVE (LXST CXNTURY TYPE) ※ JDM NIGHT CAR MUSIC | ФОНК 2023" FontSize="11"/></TextBlock>
+
         </StackPanel>
         <ToolBar Margin="0,3,0,3" Grid.Column="1" Grid.Row="0" Background='Black'>
             <Button Command="ApplicationCommands.Open"
